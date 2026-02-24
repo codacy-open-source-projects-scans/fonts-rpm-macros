@@ -53,8 +53,8 @@ end
 local function meld(name1,name2)
   local name3 = "-" .. name2 .. "-"
   for token in string.gmatch(name1 .. "-" , "..-%-") do
-    token = string.gsub(token, "%-", "%%-")
-    name3 = string.gsub(name3, "%-" .. token, "-")
+    token2 = string.gsub(token, "%-", "%%-")
+    name3 = string.gsub(name3, "%-" .. token2, "-")
   end
   return string.gsub( name1 .. name3 , "%-+$", "")
 end
